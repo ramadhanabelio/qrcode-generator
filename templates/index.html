@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Flowbite -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" /> -->
+    <!-- CSS Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>QR Code Generator</title>
+    <link rel="icon" type="image/x-icon" href="../img/QR Code Generator.png" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center bg-gray-800 text-white py-24">
+      <div class="container mx-auto text-center">
+        <h1 class="text-4xl font-bold">QR Code Generator</h1>
+        <h4 class="text-xl mt-4">Easy to Generate QR Code</h4>
+        <form action="/generate" method="post" class="mt-8">
+          <div class="flex items-center justify-center flex-col px-8">
+            <div class="relative w-full max-w-xl">
+              <input type="text" id="url" name="url" placeholder="Input your website url" class="bg-gray-700 text-white px-4 py-3 rounded-full w-full focus:outline-none focus:ring focus:border-blue-300" />
+
+              <!-- Button icon paste -->
+              <button type="button" id="paste-icon" class="absolute right-0 top-0 h-full bg-gray-700 hover:bg-gray-300 text-white font-semibold py-2 px-3 rounded-full">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M6 18H2V3h3v1a1 1 0 0 0 0 2h2.758l2-2H7V2h3v1.779c.546-.5 1.26-.777 2-.779h5a2 2 0 0 0-2-2h-3.278A1.992 1.992 0 0 0 10 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h4a.972.972 0 0 0 .474-.136A4.01 4.01 0 0 1 6 18Z"
+                  />
+                  <path d="M12 5a1 1 0 0 0-.707.293l-3 3A1 1 0 0 0 8 9h4V5Z" />
+                  <path d="M18.067 5H14v4a2 2 0 0 1-2 2H8v7a1.969 1.969 0 0 0 1.933 2h8.134A1.97 1.97 0 0 0 20 18V7a1.97 1.97 0 0 0-1.933-2Z" />
+                </svg>
+              </button>
+
+              <!-- Button icon hapus -->
+              <button type="button" id="clear-icon" class="absolute right-0 top-0 h-full bg-gray-700 hover:bg-gray-300 text-white font-semibold py-2 px-3 rounded-full" style="display: none">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z" />
+                </svg>
+              </button>
+            </div>
+
+            <button type="submit" class="mt-4 bg-white hover:bg-gray-300 text-black font-semibold py-2 px-4 md:w-auto md:px-6 rounded-full w-full">Generate</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Description Section -->
+    <section class="py-8 px-8">
+      <div class="container mx-auto flex items-center">
+        <div class="md:px-32 px-8">
+          <h2 class="text-3xl font-bold mb-4 text-center">About QR Code Generator</h2>
+          <p class="md:text-gray-700 text-gray-700 text-center">
+            This QR Code Generator is created using the <a href="https://tailwindcss.com/" class="font-bold">Tailwind CSS</a> framework for the Front-End and its design. For the Back-End, it utilizes the programming language
+            <a href="https://www.python.org/" class="font-bold">Python</a> and the <a href="https://flask.palletsprojects.com/en/3.0.x/" class="font-bold">Flask</a> framework to automatically generate QR Codes, with the necessary libraries
+            available in Python.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-100 text-black py-4">
+      <div class="container mx-auto text-center">&copy; 2023 QR Code Generator</div>
+    </footer>
+    <!-- My JavaScript -->
+    <script src="../static/js/script.js"></script>
+    <!-- JavaScript Flowbite -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </body>
+</html>
