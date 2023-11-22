@@ -25,7 +25,7 @@ Make sure you have Python installed on your system before getting started.
 **1.** Clone the project repository to your local directory:
 
    ```bash
-   git clone https://github.com/ramadhanabelio/qrcode_generator.git
+   git clone https://github.com/ramadhanabelio/qrcode-generator.git
    ```
 
 **2.** Navigate to the project directory:
