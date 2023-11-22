@@ -10,10 +10,10 @@ This is one of the projects I created to enhance my knowledge of the Python prog
 2. Download the generated QR Code.
 
 ## Project Resources
-1. Python
-2. Flask
-3. qrcode
-4. os
+1. Python: The primary programming language used for developing the application.
+2. Flask: A micro web framework in Python used to build the web application and handle HTTP requests.
+3. qrcode: A Python library used to generate QR Codes from provided data or URLs.
+4. os: This module in Python provides functions for interacting with the operating system, utilized in this application to handle file paths and directory creation for storing generated QR Codes.
 
 ## Usage
 Follow these steps to run the QR Code Generator application:
