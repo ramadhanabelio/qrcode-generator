@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QR Code Generator</title>
     <link href="{{ url_for('static', filename='img/logo.png') }}" rel="icon" />
-    <!-- CSS Flowbite -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" /> -->
     <!-- CSS Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <!-- My CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
   </head>
   <body>
     <!-- Hero Section -->
@@ -65,8 +61,6 @@
     </footer>
 
     <!-- My JavaScript -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='js/script.js') }}" />
-    <!-- JavaScript Flowbite -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
 </html>

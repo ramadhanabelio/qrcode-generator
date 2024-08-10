@@ -13,6 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function resetForm() {
+    urlInput.value = "";
+    toggleButtons("");
+  }
+
   pasteIcon.addEventListener("click", async function () {
     try {
       const text = await navigator.clipboard.readText();
@@ -24,8 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   clearIcon.addEventListener("click", function () {
-    urlInput.value = "";
-    toggleButtons("");
+    resetForm();
   });
 
   urlInput.addEventListener("input", function () {
@@ -33,6 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById("qr-form").addEventListener("submit", function () {
-    toggleButtons("");
+    setTimeout(resetForm, 100);
   });
+
+  window.onload = function () {
+    resetForm();
+  };
+
+  toggleButtons(urlInput.value);
 });
