@@ -10,7 +10,7 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="../static/css/style.css" />
     <title>QR Code Generator</title>
-    <link rel="icon" type="image/x-icon" href="../img/QR Code Generator.png" />
+    <!-- <link rel="icon" type="image/x-icon" href="../img/QR Code Generator.png" /> -->
   </head>
   <body>
     <!-- Hero Section -->
@@ -18,10 +18,11 @@
       <div class="container mx-auto text-center">
         <h1 class="text-4xl font-bold">QR Code Generator</h1>
         <h4 class="text-xl mt-4">Easy to Generate QR Code</h4>
-        <form action="/generate" method="post" class="mt-8">
+        <form id="qr-form" action="/generate" method="post" class="mt-8">
+          <!-- onsubmit="resetForm()" -->
           <div class="flex items-center justify-center flex-col px-8">
             <div class="relative w-full max-w-xl">
-              <input type="text" id="url" name="url" placeholder="Input your website url" class="bg-gray-700 text-white px-4 py-3 rounded-full w-full focus:outline-none focus:ring focus:border-blue-300" />
+              <input type="url" id="url" name="url" placeholder="Input your website url" class="bg-gray-700 text-white px-4 py-3 rounded-full w-full focus:outline-none focus:ring focus:border-blue-300" />
 
               <!-- Button icon paste -->
               <button type="button" id="paste-icon" class="absolute right-0 top-0 h-full bg-gray-700 hover:bg-gray-300 text-white font-semibold py-2 px-3 rounded-full">
