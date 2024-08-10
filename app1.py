@@ -19,7 +19,7 @@ def generate():
 
     image = qr.make_image(fill="black", back_color="white")
 
-    save_dir = os.path.join('img', 'qrcodes')
+    save_dir = os.path.join('static/img/qrcodes/', 'qrcodes')
     os.makedirs(save_dir, exist_ok=True)
 
     random_filename = str(uuid.uuid4())
@@ -32,7 +32,7 @@ def generate():
 @app.route('/download')
 def download():
     qrcode_name = request.args.get('qrcode')
-    save_dir = os.path.join('img', 'qrcodes')
+    save_dir = os.path.join('static/img/qrcodes/', 'qrcodes')
     file_path = os.path.join(save_dir, f"{qrcode_name}.png")
 
     return send_file(file_path, as_attachment=True)

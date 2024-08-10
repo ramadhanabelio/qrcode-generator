@@ -1,2 +1,2 @@
-.env
-static/docs/
+templates/index-bs.html
+app1.py
