@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link href="{{ url_for('static', filename='img/logo.png') }}" rel="icon" />
     <!-- CSS Flowbite -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" /> -->
     <!-- CSS Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <!-- My CSS -->
-    <link rel="stylesheet" href="../static/css/style.css" />
-    <title>QR Code Generator</title>
-    <!-- <link rel="icon" type="image/x-icon" href="../img/QR Code Generator.png" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
   </head>
   <body>
     <!-- Hero Section -->
@@ -18,13 +18,11 @@
       <div class="container mx-auto text-center">
         <h1 class="text-4xl font-bold">QR Code Generator</h1>
         <h4 class="text-xl mt-4">Easy to Generate QR Code</h4>
-        <form id="qr-form" action="/generate" method="post" class="mt-8">
-          <!-- onsubmit="resetForm()" -->
+        <form id="qr-form" action="/generate" method="POST" class="mt-8">
           <div class="flex items-center justify-center flex-col px-8">
             <div class="relative w-full max-w-xl">
-              <input type="url" id="url" name="url" placeholder="Input your website url" class="bg-gray-700 text-white px-4 py-3 rounded-full w-full focus:outline-none focus:ring focus:border-blue-300" />
-
-              <!-- Button icon paste -->
+              <input type="url" id="url" name="url" placeholder="Input your website url" class="bg-gray-700 text-white px-4 py-3 rounded-full w-full focus:outline-none focus:ring focus:border-blue-300" required />
+              <!-- Button Icon Paste -->
               <button type="button" id="paste-icon" class="absolute right-0 top-0 h-full bg-gray-700 hover:bg-gray-300 text-white font-semibold py-2 px-3 rounded-full">
                 <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                   <path
@@ -34,15 +32,13 @@
                   <path d="M18.067 5H14v4a2 2 0 0 1-2 2H8v7a1.969 1.969 0 0 0 1.933 2h8.134A1.97 1.97 0 0 0 20 18V7a1.97 1.97 0 0 0-1.933-2Z" />
                 </svg>
               </button>
-
-              <!-- Button icon hapus -->
+              <!-- Button Icon Delete -->
               <button type="button" id="clear-icon" class="absolute right-0 top-0 h-full bg-gray-700 hover:bg-gray-300 text-white font-semibold py-2 px-3 rounded-full" style="display: none">
                 <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z" />
                 </svg>
               </button>
             </div>
-
             <button type="submit" class="mt-4 bg-white hover:bg-gray-300 text-black font-semibold py-2 px-4 md:w-auto md:px-6 rounded-full w-full">Generate</button>
           </div>
         </form>
@@ -67,8 +63,9 @@
     <footer class="bg-gray-100 text-black py-4">
       <div class="container mx-auto text-center">&copy; 2023 QR Code Generator</div>
     </footer>
+
     <!-- My JavaScript -->
-    <script src="../static/js/script.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/script.js') }}" />
     <!-- JavaScript Flowbite -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
   </body>

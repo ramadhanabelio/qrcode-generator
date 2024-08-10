@@ -1,34 +1,38 @@
-document.getElementById("paste-icon").addEventListener("click", function () {
-  navigator.clipboard.readText().then(function (text) {
-    document.getElementById("url").value = text;
-    toggleButtons(text);
+document.addEventListener("DOMContentLoaded", function () {
+  const urlInput = document.getElementById("url");
+  const pasteIcon = document.getElementById("paste-icon");
+  const clearIcon = document.getElementById("clear-icon");
+
+  function toggleButtons(text) {
+    if (text === "") {
+      pasteIcon.style.display = "block";
+      clearIcon.style.display = "none";
+    } else {
+      pasteIcon.style.display = "none";
+      clearIcon.style.display = "block";
+    }
+  }
+
+  pasteIcon.addEventListener("click", async function () {
+    try {
+      const text = await navigator.clipboard.readText();
+      urlInput.value = text;
+      toggleButtons(text);
+    } catch (err) {
+      console.error("Failed to read clipboard contents: ", err);
+    }
+  });
+
+  clearIcon.addEventListener("click", function () {
+    urlInput.value = "";
+    toggleButtons("");
+  });
+
+  urlInput.addEventListener("input", function () {
+    toggleButtons(urlInput.value);
+  });
+
+  document.getElementById("qr-form").addEventListener("submit", function () {
+    toggleButtons("");
   });
 });
-
-document.getElementById("clear-icon").addEventListener("click", function () {
-  document.getElementById("url").value = "";
-  toggleButtons("");
-});
-
-function toggleButtons(text) {
-  var pasteButton = document.getElementById("paste-icon");
-  var clearButton = document.getElementById("clear-icon");
-
-  if (text === "") {
-    pasteButton.style.display = "block";
-    clearButton.style.display = "none";
-  } else {
-    pasteButton.style.display = "none";
-    clearButton.style.display = "block";
-  }
-}
-
-document.querySelector("form").addEventListener("submit", function (e) {
-  document.getElementById("url").value = "";
-
-  toggleButtons("");
-});
-
-function resetForm() {
-  document.getElementById("url").value = "";
-}
