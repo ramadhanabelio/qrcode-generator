@@ -12,6 +12,8 @@ This is one of the projects I created to enhance my knowledge of the Python prog
 
 ## 📖 Features
 
+Interesting features of QR Code Generator:
+
 1. **Generate QR Code from Provided URL**: The application allows users to easily generate QR Codes by entering a desired URL. The generated QR Code can then be used for quick and convenient sharing or access to the link.
    
 3. **Download the Generated QR Code**: Once a QR Code is created, users can download it as an image file. This feature ensures the QR Code can be saved locally and used for various purposes, such as embedding in documents or sharing offline.
