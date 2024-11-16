@@ -12,8 +12,9 @@ This is one of the projects I created to enhance my knowledge of the Python prog
 
 ## 📖 Features
 
-1. Generate QR Code from the provided URL.
-2. Download the generated QR Code.
+1. **Generate QR Code from Provided URL**: The application allows users to easily generate QR Codes by entering a desired URL. The generated QR Code can then be used for quick and convenient sharing or access to the link.
+   
+3. **Download the Generated QR Code**: Once a QR Code is created, users can download it as an image file. This feature ensures the QR Code can be saved locally and used for various purposes, such as embedding in documents or sharing offline.
 
 ## 🛠️ Project Installation Guide
 
@@ -51,7 +52,7 @@ python app.py
 
 After following the steps above, the application will run on your local server. You can access it via a web browser using the address provided by Flask (usually http://localhost:5000).
 
-## How to Use
+## 🛈 How to Use
 
 1. Open the application in a web browser using the address provided by Flask.
 2. Enter the URL you want to convert into a QR Code on the home page.
