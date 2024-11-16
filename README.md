@@ -1,30 +1,27 @@
-# QR Code Generator | Responsive Web for Generate QR Code with Flask
+<div id="start-of-content" align="center">
 
-## Description
+### QR Code Generator | Responsive Web for Generate QR Code with Flask
+
+</div>
+
+## 📙 Description
 
 This is one of the projects I created to enhance my knowledge of the Python programming language. This project involves creating a responsive web application for mobile devices. The web application serves as a tool for generating QR codes automatically using Python's built-in libraries. I developed this web application using the Python programming language with the Flask framework to enable the presentation of Python projects in a web interface.
 
 ![QR Code Generator Thumbnail](static/img/Thumbnail.png)
 
-## Features
+## 📖 Features
 
 1. Generate QR Code from the provided URL.
 2. Download the generated QR Code.
 
-## Project Resources
+## 🛠️ Project Installation Guide
 
-1. Python: The primary programming language used for developing the application.
-2. Flask: A micro web framework in Python used to build the web application and handle HTTP requests.
-3. qrcode: A Python library used to generate QR Codes from provided data or URLs.
-4. os: This module in Python provides functions for interacting with the operating system, utilized in this application to handle file paths and directory creation for storing generated QR Codes.
-
-## Usage
-
-Follow these steps to run the QR Code Generator application:
+Following are the steps to run a Flask application:
 
 ### Prerequisites
 
-Make sure you have Python installed on your system before getting started.
+Make sure you have [Python](https://www.python.org/downloads/) installed on your system before starting.
 
 ### Steps
 
